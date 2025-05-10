@@ -1,6 +1,7 @@
 /* header  */
 body {
     user-select: none;
+    background-color: #F3F4F6;
 }
 
 .header {
@@ -10,7 +11,7 @@ body {
     background-size: cover;
     margin: auto;
     height: 240px;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 .font {
@@ -49,12 +50,12 @@ body {
 
 /* main tag */
 .main_tag {
+    display: flex;
     position: absolute;
-    top: 458px;
-    /* bottom: 400px; */
+    top: 430px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: min(100%, 1230px);
+    width: min(96%, 1230px);
     padding-bottom: 15px;
 }
 
@@ -63,7 +64,7 @@ body {
 .section_left {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 27px;
     background-color: #E5E7EB;
     width: 50%;
     padding: 30px 36px;
@@ -76,19 +77,22 @@ body {
     column-gap: 30px;
 }
 
+
 .items_image_div {
     background-color: #f3f4f6;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 130px;
+    height: 100px;
     border-radius: 10px;
     border: 2px solid#D2D5DA;
-    padding-block: 15px;
+    padding: 20px 8px;
 }
 
 .items_child_div {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     width: 100%;
     /* border: 2px solid green; */
@@ -101,8 +105,6 @@ body {
 }
 
 .item_name {
-    font-size: 24px;
-    line-height: 24px;
     font-weight: 600;
 }
 
@@ -114,7 +116,6 @@ body {
 }
 
 .price {
-    font-size: 24px;
     font-weight: 600;
 }
 
@@ -136,34 +137,49 @@ body {
 /* total price elements  */
 
 .total_price_div {
-    border-top: 1px solid #D2D5DA;
+    border-top: 2px solid #D2D5DA;
+    padding-top: 32px;
 }
 
 .coupon_div {
     display: flex;
-    column-gap: 8px;
+    column-gap: 6px;
 }
 
 .coupon_input {
     outline: none;
     border: 2px solid#D2D5DA;
     border-radius: 8px;
-    padding: 12px 0 12px 10px;
+    padding: 16px 0 16px 16px;
     width: 76%;
+    transition: .4s;
+    font-size: 16px;
+}
+
+input:focus,
+input:hover {
+    border-color: rgba(0, 0, 0, 0.685);
+    transition: .4s;
+
 }
 
 ::placeholder {
-
     color: #394150;
 }
 
 .apply_btn {
     background-color: #1D1D1F;
     color: #FFFFFF;
+    font-weight: 600;
     padding: 16px;
     border-radius: 8px;
     cursor: pointer;
+    transition: .4s;
+    text-wrap: nowrap;
+}
 
+.apply_btn:hover {
+    transform: scale(1.1)
 }
 
 /* total list */
@@ -174,15 +190,136 @@ body {
     flex-direction: column;
     row-gap: 15px;
 }
-.total_li{
+
+.total_li {
     display: flex;
     justify-content: space-between;
 }
 
-.total_li h2,span {
+.total_li h2,
+span {
     color: #1D1D1F;
     font-weight: 600;
 }
-.total_prices{
 
+/* right section */
+
+.section_right {
+
+    background-color: #FFFFFF;
+    padding: 30px 36px;
+    border-radius: 0 15px 15px 0;
+    width: 50%;
+}
+
+
+
+/* form tag */
+
+.form_tag {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.form_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 20px;
+}
+
+.contact_info {
+    font-weight: 600;
+}
+
+.form_labels {
+    color: #394150;
+    font-weight: 600;
+}
+
+.form_input {
+    padding: 18px 0 20px 20px;
+    border-radius: 8px;
+    border: 2px solid #D2D5DA;
+    background-color: #F3F4F6;
+    transition: .4s;
+    outline: none;
+    font-size: 16px;
+    color: #394150;
+    width: 100%;
+}
+
+.country_postalcode {
+    display: flex;
+    column-gap: 20px;
+}
+
+/* country div */
+.country {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 100%;
+}
+
+select {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 20px 0 20px;
+    /* add space on both sides */
+    height: 54px;
+    border: 2px solid #D2D5DA;
+    border-radius: 8px;
+    outline: none;
+}
+
+
+.country_select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 15px;
+    background-color: #F3F4F6;
+    border: 2px solid #D2D5DA;
+    border-radius: 8px;
+    height: 60px;
+
+}
+
+.country_name {
+    font-weight: 600;
+}
+
+.arrow {
+    cursor: pointer
+}
+
+/* postalcode div */
+.postal_code {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: 60px;
+}
+
+/* submit div */
+
+.submit_btn {
+    background-color: #1D1D1F;
+    color: #FFFFFF;
+    padding-block: 15px;
+    font-size: 21px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.submit_btn:hover {
+    transform: translateY(-5px);
+    background-color: #1D1D1F;
+    box-shadow: 0 10px 15px -2px #1D1D1F;
 }

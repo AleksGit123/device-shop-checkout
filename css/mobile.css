@@ -1,0 +1,33 @@
+@media(max-width:660px) {
+    .main_tag {
+        top: 700px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section_left,
+    .section_right {
+        width: 100%;
+    }
+
+    .section_left {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .items_div {
+        column-gap: 10px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .item_name {
+        font-size: 14px;
+    }
+
+    /* section right */
+    .section_right {
+        border-radius: 0 0 15px 15px;
+    }
+}

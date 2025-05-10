@@ -1,0 +1,37 @@
+@media (max-width:830px) {
+    /* section left */
+
+    .section_left {
+        padding-inline: 10px;
+    }
+
+    .phone {
+        width: 35px;
+        height: 70px;
+    }
+
+    .apple_watch {
+        width: 25px;
+        height: 48px;
+    }
+
+    .imac {
+        width: 60px;
+        height: 65px;
+    }
+
+    .items_image_div {
+        padding: 0;
+        width: 100px;
+    }
+
+
+
+    .item_name,
+    .item_color,
+    .price {
+        font-size: 15px;
+    }
+
+
+}

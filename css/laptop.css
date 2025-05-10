@@ -1,0 +1,16 @@
+@media(max-width: 1024px) {
+
+    /* section left */
+    .section_left {
+        padding-inline: 20px;
+    }
+
+    .items_div {
+        column-gap: 20px;
+    }
+
+    /* section right */
+    .section_right {
+        padding-inline: 20px;
+    }
+}
